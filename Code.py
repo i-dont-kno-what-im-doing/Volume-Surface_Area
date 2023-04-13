@@ -1,16 +1,10 @@
 import math
 def runCodePrism():
-  print("Do you want volume or surface area(type the number)")
-  print("1. Volume")
-  print("2. Surface Area")
-  b = input("")
+  b = input("Do you want volume or surface area(type the number)\n1. Volume\n2. Surface Area")
   if b == "1":
-    print("What is side length 1")
-    sd1 = input("")
-    print("What is side length 2")
-    sd2 = input("")
-    print("What is side length 3")
-    sd3 = input("")
+    sd1 = input("What is side length 1")
+    sd2 = input("What is side length 2")
+    sd3 = input("What is side length 3")
     try:
       vol = float(sd1)*float(sd2)*float(sd3)
       print("The volume is", vol, "units cubed")
@@ -18,12 +12,9 @@ def runCodePrism():
       print("The values you entered seem to be incorrect (possibly entered a non-number. Please try entering your values again. Press enter to continue.")
       runCodePrism()
   elif b == "2":
-    print("What is side length 1")
-    sd1 = input("")
-    print("What is side length 2")
-    sd2 = input("")
-    print("What is side length 3")
-    sd3 = input("")
+    sd1 = input("What is side length 1")
+    sd2 = input("What is side length 2")
+    sd3 = input("What is side length 3")
     try:
       LA = ((2*float(sd1))+(2*float(sd2)))*float(sd3)
       SA = float(LA)+(2*(float(sd1)*float(sd2)))
@@ -35,13 +26,9 @@ def runCodePrism():
     print("That is not a valid option, please type 1 or 2")
     runCodePrism()
 def runCodeCube():
-  print("Do you want volume or surface area(type the number)")
-  print("1. Volume")
-  print("2. Surface Area")
-  option = input("")
+  option = input("Do you want volume or surface area(type the number)\n1. Volume\n2. Surface Area")
   if option ==("1"):
-    print("What is the side length")
-    sl = input("")
+    sl = input("What is the side length")
     try:
       v = float(sl)**3
       print("The volume is", v, "units cubed")
@@ -49,8 +36,7 @@ def runCodeCube():
       print("The values you entered seem to be incorrect (possibly entered a non-number. Please try entering your values again. Press enter to continue.")
       runCodeCube()
   elif option == ("2"):
-    print("What is the side length")
-    sl = input("")
+    sl = input("What is the side length")
     try:
       sa = (float(sl)**2)* 6
       print("The surface area is", sa, "units squared")
@@ -60,25 +46,18 @@ def runCodeCube():
     print("That is not a valid option, please type 1 or 2")
     runCodeCube()
 def runCodeCylinder():
-  print("Do you want volume or surface area (type the number)")
-  print("1. Volume")
-  print("2. Surface Area")
-  a = input("")
+  a = input("Do you want volume or surface area (type the number)\n1. Volume\n2. Surface Area")
   if a == ("1"):
-    print ("What is the radius")
-    r = input("")
-    print("What is the height")
-    h = input("")
+    r = input("What is the radius")
+    h = input("What is the height")
     try:
       v = (math.pi*float(r)**2)*float(h)
       print ("The volume is", v,"units cubed")
     except ValueError:
       print("The values you entered seem to be incorrect (possibly entered a non-number. Please try entering your values again. Press enter to continue.")
   elif a ==("2"):
-    print ("What is the radius")
-    r = input("")
-    print("What is the height")
-    h = input("")
+    r = input("What is the radius")
+    h = input("What is the height")
     try:
       LA = 2*float(r)*math.pi*float(h)
       SA = float(LA)+2*(math.pi*float(r)**2)
@@ -89,25 +68,18 @@ def runCodeCylinder():
     print("That is not a valid option, please type 1 or 2")
     runCodeCylinder()
 def runCodePyramid():
-  print("Do you want volume or surface area(type the number)")
-  print("1. Volume")
-  print("2. Surface Area")
-  a = input("")
+  a = input("Do you want volume or surface area (type the number)\n1. Volume\n2. Surface Area")
   if a == ("1"):
-    print("What is the base side length")
-    bsl = input("")
-    print("What is the height")
-    h = input("")
+    bsl = input("What is the base side length")
+    h = input("What is the height")
     try:
       v = (float(h)*float(bsl)**2)/3
       print("The volume is", v, "units cubed")
     except ValueError:
       print("The values you entered seem to be incorrect (possibly entered a non-number. Please try entering your values again. Press enter to continue.")
   elif a ==("2"):
-    print("What is the base side length")
-    bsl = input("")
-    print("What is the height")
-    h = input("")
+    bsl = input("What is the base side length")
+    h = input("What is the height")
     try:
       x = float(bsl)/2
       l = math.sqrt((float(x)**2)+(float(h)**2))
@@ -120,15 +92,10 @@ def runCodePyramid():
     print("That is not a valid option, please type 1 or 2")
     runCodePyramid()
 def runCodeCone():
-  print("Do you want volume or surface area(type the number)")
-  print("1. Volume")
-  print("2. Surface Area")
-  a = input("")
+  a = input("Do you want volume or surface area (type the number)\n1. Volume\n2. Surface Area")
   if a == ("1"):
-    print("What is the radius")
-    r = input("")
-    print("What is the height")
-    h = input("")
+    r = input("What is the radius")
+    h = input("What is the height")
     try:
       b = math.pi*float(r)**2
       v = (float(b)*float(h))/3
