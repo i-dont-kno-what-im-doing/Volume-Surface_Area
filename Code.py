@@ -173,6 +173,30 @@ def runCodeSphere():
   else:
     print("That is not a valid option, please type 1 or 2")
     runCodeSphere()
+def runCodeOctahedron():
+  print("Do you want volume or surface area(type the number)")
+  print("1. Volume")
+  print("2. Surface Area")
+  a = input("")
+  if a == ("1"):
+    print("What is the edge value")
+    e = input("") 
+    try:
+      v = 0.47140452*float(e)**3
+      print("The volume is",v,"units cubed")
+    except ValueError:
+      print("The values you entered seem to be incorrect (possibly entered a non-number. Please try entering your values again. Press enter to continue.")
+  elif a ==("2"):
+    print("What is the edge length")
+    e = input("")
+    try:
+      SA = 3.46410162*float(e)**2
+      print("The surface area is", SA, "units squared")
+    except ValueError:
+      print("The values you entered seem to be incorrect (possibly entered a non-number. Please try entering your values again. Press enter to continue.")
+  else:
+    print("That is not a valid option, please type 1 or 2")
+    runCodeOctahedron()
 def runCodeDodecahedron():
   print("Do you want volume or surface area(type the number)")
   print("1. Volume")
@@ -277,9 +301,10 @@ def runCode():
   print("4. Square Pyramid")
   print("5. Cone")
   print("6. Sphere")
-  print("7. Dodecahedron")
-  print("8. Icosahedron")
-  print("9. Rhombicosidodecahedron")
+  print("7. Octahedron")
+  print("8. Dodecahedron")
+  print("9. Icosahedron")
+  print("10. Rhombicosidodecahedron")
   option = input("")
   if option == ("1"):
     runCodePrism()
@@ -300,12 +325,15 @@ def runCode():
     runCodeSphere()
     yN()
   elif option == ("7"):
-    runCodeDodecahedron()
+    runCodeOctahedron()
     yN()
   elif option == ("8"):
-    runCodeIcosahedron()
+    runCodeDodecahedron()
     yN()
   elif option == ("9"):
+    runCodeIcosahedron()
+    yN()
+  elif option == ("10"):
     runCodeRhombicosidodecahedron()
     yN()
   else:  
