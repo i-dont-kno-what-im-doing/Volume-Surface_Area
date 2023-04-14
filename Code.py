@@ -319,6 +319,32 @@ def runCodeRhombicosidodecahedron():
   else:
     print("That is not a valid option")
     runCodeRhombicosidodecahedron()
+def runCodeSteinmetzSolid():
+  print("Do you want volume or surface area(type the number)")
+  print("1. Volume")
+  print("2. Surface Area")
+  a = input("")
+  if a == ("1"):
+    print("What is the radius")
+    r = input("")
+    try:
+      v = 5.33333333*float(r)**3
+      print("The volume is", v,"units cubed")
+    except ValueError:
+      print("The values you entered seem to be incorrect (possibly entered a non-number. Please try entering your values again. Press enter to continue.")
+      runCodeSteinmetzSolid()
+  elif a ==("2"):
+    print("What is the radius")
+    r = input("")
+    try:
+      SA = 16*float(r)**2
+      print("The surface area is", SA,"units squared")
+    except ValueError:
+      print("The values you entered seem to be incorrect (possibly entered a non-number. Please try entering your values again. Press enter to continue.")
+      runCodeSteinmetzSolid()
+  else:
+    print("That is not a valid option")
+    runCodeSteinmetzSolid()
 def yN():
   9
   print("Do you want to do another shape")
@@ -355,6 +381,7 @@ def runCode():
   print("9. Dodecahedron")
   print("10. Icosahedron")
   print("11. Rhombicosidodecahedron")
+  print("12. Steinmetz solid")
   option = input("")
   if option == ("1"):
     runCodePrism()
@@ -388,6 +415,9 @@ def runCode():
     yN()
   elif option == ("11"):
     runCodeRhombicosidodecahedron()
+    yN()
+  elif option ==("12"):
+    runCodeSteinmetzSolid()
     yN()
   else:  
     print("That is not a valid option.")
