@@ -196,8 +196,7 @@ def runCodeOctahedron():
       print("The values you entered seem to be incorrect (possibly entered a non-number. Please try entering your values again. Press enter to continue.")
       runCodeOctahedron()
   elif a ==("2"):
-    print("What is the edge length")
-    e = input("")
+    e = input("What is the edge length")
     try:
       SA = 3.46410162*float(e)**2
       print("The surface area is", SA, "units squared")
@@ -208,13 +207,9 @@ def runCodeOctahedron():
     print("That is not a valid option, please type 1 or 2")
     runCodeOctahedron()
 def runCodeDodecahedron():
-  print("Do you want volume or surface area(type the number)")
-  print("1. Volume")
-  print("2. Surface Area")
-  a = input("")
+  a = input("Do you want volume or surface area(type the number)/n1. Volume/n2. Surface Area")
   if a == "1":
-    print("What is the edge length")
-    e = input("")
+    e = input("What is the edge length")
     dd = (15+7*2.23606798)/4
     try:
       ddd = float(dd)*float(e)**3
@@ -223,8 +218,7 @@ def runCodeDodecahedron():
       print("The values you entered seem to be incorrect (possibly entered a non-number. Please try entering your values again. Press enter to continue.")
       runCodeDodecahedron()
   elif a == "2":
-    print("What is the edge length")
-    e = input("")
+    e = input("What is the edge length")
     try:
       SA = 20.6457288*(float(e)**2)
       print("The surface area is", SA,"units squared")
@@ -235,13 +229,9 @@ def runCodeDodecahedron():
     print("That is not a valid option")
     runCodeDodecahedron()
 def runCodeIcosahedron():
-  print("Do you want volume or surface area(type the number)")
-  print("1. Volume")
-  print("2. Surface Area")
-  a = input("")
+  a = input("Do you want volume or surface area(type the number)/n1. Volume/n2. Surface Area")
   if a == "1":
-    print("What is the edge length")
-    e = input("")
+    e = input("What is the edge length")
     try:
       v = 2.18169499*(float(e)**3)
       print("The volume is", v, "units squared")
@@ -261,13 +251,9 @@ def runCodeIcosahedron():
     print("That is not a valid option")
     runCodeIcosahedron()
 def runCodeRhombicosidodecahedron():
-  print("Do you want volume or surface area(type the number)")
-  print("1. Volume")
-  print("2. Surface Area")
-  a = input("")
+  a = input("Do you want volume or surface area(type the number)\n1. Volume\n2. Surface Area")
   if a == ("1"):
-    print("What is the edge length")
-    e = input("")
+    e = input("What is the edge length")
     try:
       v = 41.6153237825*float(e)**3
       print("The Volume is",v,"units cubed")
@@ -287,10 +273,7 @@ def runCodeRhombicosidodecahedron():
     print("That is not a valid option")
     runCodeRhombicosidodecahedron()
 def runCodeSteinmetzSolid():
-  print("Do you want volume or surface area(type the number)")
-  print("1. Volume")
-  print("2. Surface Area")
-  a = input("")
+  a = input("Do you want volume or surface area(type the number)\n1. Volume\n2. Surface Area")
   if a == ("1"):
     print("What is the radius")
     r = input("")
@@ -336,20 +319,7 @@ def yN():
     print("That is not a valid option. Please type y for yes or n for no")
     yN()
 def runCode(): 
-  print("Which shape do you want to find?")
-  print("1. Rectangular Prism")
-  print("2. Cube")
-  print("3. Cylinder")
-  print("4. Square Pyramid")
-  print("5. Cone")
-  print("6. Sphere")
-  print("7. Torus")
-  print("8. Octahedron")
-  print("9. Dodecahedron")
-  print("10. Icosahedron")
-  print("11. Rhombicosidodecahedron")
-  print("12. Steinmetz solid")
-  option = input("")
+  option = input("Which shape do you want to find?\n1. Rectangular Prism\n2. Cube\n3. Cylinder\n4. Square Pyramid\n5. Cone\n6. Sphere\n7. Torus\n8. Octahedron\n9. Dodecahedron\n10. Icosahedron\n11. Rhombicosidodecahedron\n12. Steinmetz solid")
   if option == ("1"):
     runCodePrism()
     yN()
